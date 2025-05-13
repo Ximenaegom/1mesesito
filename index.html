@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestro Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #a2d9ff, #ffffff);
+      font-family: 'Segoe UI', sans-serif;
+      color: #444;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-top: 30px;
+      color: #d84393;
+    }
+
+    .carta {
+      max-width: 600px;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .carta p {
+      font-size: 1.2em;
+      line-height: 1.7;
+    }
+
+    .frases {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .frases p {
+      font-style: italic;
+      font-size: 1.1em;
+    }
+
+    .boton {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      background-color: #ff80ab;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .boton:hover {
+      background-color: #e91e63;
+    }
+
+    .razones {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #ffeef8;
+      border-radius: 10px;
+    }
+
+    .corazon {
+      position: fixed;
+      top: -50px;
+      font-size: 30px;
+      animation: caer 6s linear infinite;
+      color: #f06292;
+    }
+
+    @keyframes caer {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Nuestro Mes Juntos, Leo</h1>
+
+  <div class="carta">
+    <p>
+      Hoy cumplimos un mes, mi amor. Un mes lleno de emociones, de retos, de sonrisas y abrazos que me llenan el alma. En cada plàtica, sentí cómo estamos formando algo real y fuerte, y aunque a veces tengamos recaídas, sé que nuestro amor es más grande y lo vamos a lograr. Estar contigo es como respirar después de estar bajo el agua, como ver un cielo claro después de la tormenta. Te amo con un amor que se siente nuevo y eterno al mismo tiempo, con ganas de quedarme a tu lado en todos tus días buenos y en los que no tanto también.
+    </p>
+    <p>
+      Gracias por cada detalle, por cada "te amo", por seguir apostando por nosotros. Sé que un día estaremos volando juntos, literalmente, con nuestros niños dormidos en el asiento de atrás, y tú y yo tomados de la mano como ese primer día que nos tomamos una foto en el estadio y comimos una torta ahogada viendo jugar al Atlas. Nada me hace más feliz que compartir esta aventura contigo.
+    </p>
+  </div>
+
+  <div class="frases">
+    <p>“Tu eres mi único, primer y verdadero amor.”</p>
+    <p>“Soy una persona diferente desde que llegaste.”</p>
+  </div>
+
+  <button class="boton" onclick="mostrar()">Haz clic para ver por qué te amo</button>
+
+  <div class="razones" id="razones">
+    <ul>
+      <li>Porque me haces sentir segura.</li>
+      <li>Porque contigo todo tiene sentido.</li>
+      <li>Porque me haces reír como nadie.</li>
+      <li>Porque apuestas por mí incluso cuando yo no lo hago.</li>
+      <li>Porque te amo con cada parte de mí.</li>
+    </ul>
+  </div>
+
+  <script>
+    function mostrar() {
+      const r = document.getElementById("razones");
+      r.style.display = r.style.display === "block" ? "none" : "block";
+    }
+
+    function crearCorazon() {
+      const corazon = document.createElement("div");
+      corazon.classList.add("corazon");
+      corazon.style.left = Math.random() * 100 + "vw";
+      corazon.innerText = "❤";
+      document.body.appendChild(corazon);
+
+      setTimeout(() => corazon.remove(), 6000);
+    }
+
+    setInterval(crearCorazon, 400);
+  </script>
+
+</body>
+</html>
